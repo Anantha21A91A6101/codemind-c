@@ -1,9 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    double pi=3.14,r,c;
-    scanf("%lf",&r);
-    c=pi*r*r;
-    printf("%.2f",c);
+    int r;
+    float a;
+    scanf("%d",&r);
+    a=3.14*r*r;
+    printf("%0.2f",a);
     return 0;
 }
