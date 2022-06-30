@@ -2,16 +2,21 @@
 #include<math.h>
 int main()
 {
-    int n,s;
+    int n,k,i,c=0;
     scanf("%d",&n);
-    s=sqrt(n);
-    if(s*s==n)
+    for(i=1;i<n;i++)
     {
-    printf("True");
+        k=i*i;
+        if(k==n)
+        {
+            printf("True");
+            c=c+1;
+            break;
+        }
     }
-    else
+    if(c==0)
     {
-    printf("False");
+        printf("False");
     }
     return 0;
 }
