@@ -2,23 +2,24 @@
 #include<math.h>
 int main()
 {
-    int n,k,sum=0,c=0,r;
+    int n,c=0,r,sum=0,h,p=0,k,rem;
     scanf("%d",&n);
-    k=n;
-    while(k>0)
+    h=n;
+    while(n>0)
     {
-        k=k/10;
-        c++;
+        r=n%10;
+        sum=sum*10+r;
+        n=n/10;
     }
-    k=n;
-    while(k>0)
+    while(sum>0)
     {
-        r=k%10;
-        sum=sum+pow(r,c);
-        k=k/10;
-        c--;
+        rem=sum%10;
+        c=c+1;
+        k=pow(rem,c);
+        p=p+k;
+        sum=sum/10;
     }
-    if(sum==n)
+    if(p==h)
     {
         printf("True");
     }
@@ -27,4 +28,5 @@ int main()
         printf("False");
     }
     return 0;
+    
 }
