@@ -1,23 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,sum=0,p,j,i=0,x;
+    int n,k,r,sum=0,add=0,rem,m;
     scanf("%d",&n);
-    p=n*n;
+    k=n*n;
     while(n>0)
     {
         r=n%10;
         sum=sum*10+r;
         n=n/10;
     }
-    x=sum*sum;
-    while(x>0)
+    m=sum*sum;
+    while(m>0)
     {
-        j=x%10;
-        i=i*10+j;
-        x=x/10;
+        rem=m%10;
+        add=add*10+rem;
+        m=m/10;
     }
-    if(p==i)
+    if(add==k)
     {
         printf("True");
     }
