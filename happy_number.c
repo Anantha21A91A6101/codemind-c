@@ -1,15 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,j,sum=0;
+    int n,sum=0,r;
     scanf("%d",&n);
-    while(sum!=1&&sum!=4)
+    while(sum!=1 && sum!=4)
     {
         sum=0;
         while(n>0)
         {
-            j=n%10;
-            sum=sum+j*j;
+            r=n%10;
+            sum=sum+r*r;
             n=n/10;
         }
         n=sum;
@@ -23,4 +23,4 @@ int main()
         printf("False");
     }
     return 0;
-}    
+}
