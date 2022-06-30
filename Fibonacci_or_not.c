@@ -3,7 +3,7 @@ int main()
 {
     int n,a,b,c;
     scanf("%d",&n);
-    if(n==0||n==1)
+    if(n==1 || n==0)
     {
         printf("True");
     }
@@ -18,14 +18,14 @@ int main()
             b=c;
             c=a+b;
         }
-            if(c==n)
-            {
-                printf("True");
-            }
-            else
-            {
-                printf("False");
-            }
+        if(c==n)
+        {
+            printf("True");
+        }
+        else
+        {
+            printf("False");
+        }
     }
     return 0;
 }
