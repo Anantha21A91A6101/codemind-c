@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,a[100],i,k,sum=0,add=0,l,c=0;
+    int n,a[100],sum=0,i,k,l,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -12,24 +12,24 @@ int main()
     {
         if(a[i]>=k&&a[i]<=l)
         {
-            sum=sum+a[i];
+            c++;
         }
         else
         {
-             if(a[i]>=add)
-             {
-                 add=a[i];
-                 c++;
-             }
+            if(a[i]>=sum)
+            {
+                sum=a[i];
+                c++;
+            }
         }
     }
-    if(c==0)
+    if(sum==0)
     {
         printf("-1");
     }
     else
     {
-        printf("%d",add);
+        printf("%d",sum);
     }
     return 0;
 }
