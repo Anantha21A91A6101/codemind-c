@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,i,k,r;
-    scanf("%d %d",&a,&b);
+    int k,i,a,b,r;
+    scanf("%d",&a);
+    scanf("%d",&b);
     for(i=a;i<=b;i++)
     {
         k=i;
@@ -15,10 +16,10 @@ int main()
             }
             k=k/10;
         }
-    if(k==0)
-    {
-        printf("%d ",i);
-    }
+        if(k==0)
+        {
+            printf("%d ",i);
+        }
     }
     return 0;
 }
