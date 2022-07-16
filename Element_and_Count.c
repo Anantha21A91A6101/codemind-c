@@ -14,15 +14,12 @@ int main()
         {
             continue;
         }
-        else
+        for(j=i+1;j<n;j++)
         {
-            for(j=i+1;j<n;j++)
+            if(a[i]==a[j])
             {
-                if(a[i]==a[j])
-                {
-                    c++;
-                    a[j]=-1;
-                }
+                c++;
+                a[j]=-1;
             }
         }
         printf("%d %d ",a[i],c);
