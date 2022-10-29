@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,k,sum=0,r,c=0;
+    scanf("%d",&n);
+    for(i=n+1;i>n;i++)
+    {
+        k=i;
+        sum=0;
+        while(k!=0)
+        {
+            r=k%10;
+            sum=sum*10+r;
+            k=k/10;
+        }
+        if(sum==i)
+        {
+            c=0;
+            for(j=1;j<=i;j++)
+            {
+                if(i%j==0)
+                {
+                    c++;
+                }
+            }
+            if(c==2)
+            {
+                printf("%d",i);
+                break;
+            }
+        }
+    }
+}
