@@ -16,7 +16,7 @@ int main()
     {
         for(j=0;j<m;j++)
         {
-            if(i==0 || j==0 || i==n-1 || i+j==k)
+            if(i==0 || j==0 || i+j==k || i==(n-1))
             {
                 sum=sum+a[i][j];
             }
